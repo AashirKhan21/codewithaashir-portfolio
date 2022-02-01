@@ -1,0 +1,28 @@
+import React from 'react';
+import './productList.css';
+import Product from '../product/product';
+
+const productList = () => {
+  return (
+    <div className='pl'>
+        <div className='pl-texts'>
+            <h1 className='pl-title'>Create & Inspire with Aashir</h1>
+            <p className='pl-desc'>
+                Aashir has a creative portfolio based on web application 
+                and desktop application which will help you to create 
+                and inspire your ideas and projects.
+            </p>
+        </div>
+        <div className='pl-list'>
+            <Product/>
+            <Product/>
+            <Product/>
+            <Product/>
+            <Product/>
+            <Product/>
+        </div>
+    </div>
+    )
+};
+
+export default productList;

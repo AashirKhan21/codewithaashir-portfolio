@@ -53,10 +53,10 @@
     margin-top: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 .a-award-text{
-    width: 70%;
+    width: 85%;
 }
 .a-award-title{
     font-weight: bold;
