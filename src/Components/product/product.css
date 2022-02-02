@@ -1,14 +1,14 @@
 .p{
     width: 30%;
-    height: 40vh;
-    margin: 20px 10px;
-    border: 2px solid #ccc;
+    height: 30vh;
+    margin: 10px 10px;
+    border: 2px solid rgb(245, 243, 243);
     border-radius: 10px 10px 0px 0px;
     overflow: hidden;
 }
 .p-browser{
     height: 20px;
-    background-color: #ccc;
+    background-color: rgb(230, 223, 223);
     display: flex;
     align-items: center;
 }
@@ -18,4 +18,12 @@
     border-radius: 50%;
     margin: 3px;
     background-color: white;
+}
+.p-img{
+    width: 100%;
+    height: 100%;
+}
+.p:hover .p-img{
+    transition: 0.5s ease-in-out;
+    transform: scale(1.1);
 }

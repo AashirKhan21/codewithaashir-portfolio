@@ -2,7 +2,7 @@ import React from 'react';
 import './product.css';
 import covidimg from '../../img/covid19.png';
 
-const product = () => {
+const product = ({img, link}) => {
   return (
     <div className='p'>
         <div className='p-browser'>
@@ -10,8 +10,8 @@ const product = () => {
             <div className='p-circle'></div>
             <div className='p-circle'></div>
         </div>
-        <a href='https://covid19-aashir.netlify.app/' target="_blank" rel='noreferrer'>
-            <img src={covidimg} alt='' className='p-img' />
+        <a href={link} target="_blank" rel='noreferrer'>
+            <img src={img} alt='' className='p-img' />
         </a>
     </div>
   )
