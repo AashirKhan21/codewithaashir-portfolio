@@ -1,0 +1,43 @@
+.c{
+    height: 100vh;
+    position: relative;
+}
+.c-bg{
+    width: 20px;
+    height: 100%;
+    background-color: #217ac4;
+    position: absolute;
+}
+.c-wrapper{
+    padding: 50px;
+    display: flex;
+}
+.c-left{
+    flex: 1;
+}
+.c-right{
+    flex: 1;
+}
+.c-title{
+    font-size: 60px;
+    font-weight: 600;
+    width: 80%;
+}
+.c-info-item{
+    display: flex;
+    margin: 50px 0px;
+    font-weight: 300;
+    width: 70%;
+}
+.c-info-item>a{
+    text-decoration: none;
+    color: black;
+}
+.c-icon{
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+.c-desc{
+    font-weight: 300;
+}
