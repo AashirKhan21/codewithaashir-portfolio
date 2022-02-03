@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './contact.css';
 import phone from '../../img/phone.png';
 import email from '../../img/email.png';
 import github from '../../img/github.png';
 import linkedin from '../../img/linkedin.png';
 
-const contact = () => {
-  return (
+const Contact = () => {
+    const Refform = useRef();
+    return (
       <div className='c'>
         <div className='c-bg'>  
         </div>
@@ -51,11 +52,12 @@ const contact = () => {
                     <b>What's your story?</b> Get in touch. Always available for freelancing if the
                     right opportunity arises.
                 </p>
-                <form className='c-form'>
+                <form ref={Refform} className='c-form'>
                     <input type='text' placeholder='Name' name='user_name'/>
                     <input type='text' placeholder='Subject' name='user_subject'/>
                     <input type='text' placeholder='Email' name='user_email'/>
-                    <textarea rows={5} placeholder='Message' name='user_message'/>
+                    <textarea rows={5} placeholder='Message' name='message'/>
+                    <button>Submit</button>
                 </form>
             </div>
         </div>
@@ -63,4 +65,4 @@ const contact = () => {
   )
 };
 
-export default contact;
+export default Contact;
