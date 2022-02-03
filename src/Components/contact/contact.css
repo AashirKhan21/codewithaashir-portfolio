@@ -49,19 +49,21 @@
     margin-top: 20px;
 }
 input{
-    width: 50%;
+    width: 90%;
     height: 50px;
-    border: none;
-    border-bottom: 1px solid #217ac4;
+    border: 1px solid #217ac4;
     margin: 10px 0px;
     font-size: 14px;
     padding-left: 10px;
+    border-radius: 20px;
 }
 textarea{
-    width: 100%;
+    width: 90%;
     margin: 10px 0px;
     font-size: 14px;
     padding-left: 10px;
+    border-radius: 20px;
+    border: 1px solid #217ac4;
 }
 button{
     width: 20%;
@@ -77,4 +79,10 @@ button:hover{
     transition: 0.3s ease-in-out;
     background-color: #043f70;
     color: white;
+}
+input:focus{
+    border: none;   
+}
+.c-done{
+    color: rgb(23, 216, 23);
 }

@@ -1,12 +1,30 @@
-import React, { useRef } from 'react';
+import React, { useRef , useState} from 'react';
 import './contact.css';
 import phone from '../../img/phone.png';
 import email from '../../img/email.png';
 import github from '../../img/github.png';
 import linkedin from '../../img/linkedin.png';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
     const Refform = useRef();
+    const [done, setDone] = useState(false);
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.
+        sendForm(
+            'service_4a6gkcs', 
+            'template_knrx7os', 
+            Refform.current, 
+            'user_ptbEnG20SF0ZEah4geAYi')
+          .then((result) => {
+              console.log(result.text);
+              setDone(true);
+          }, (error) => {
+              console.log(error.text);
+          });
+      };
     return (
       <div className='c'>
         <div className='c-bg'>  
@@ -52,12 +70,13 @@ const Contact = () => {
                     <b>What's your story?</b> Get in touch. Always available for freelancing if the
                     right opportunity arises.
                 </p>
-                <form ref={Refform} className='c-form'>
+                <form ref={Refform} onSubmit={sendEmail} className='c-form'>
                     <input type='text' placeholder='Name' name='user_name'/>
                     <input type='text' placeholder='Subject' name='user_subject'/>
                     <input type='text' placeholder='Email' name='user_email'/>
                     <textarea rows={5} placeholder='Message' name='message'/>
                     <button>Submit</button>
+                    {done ? <p className='c-done'>Message sent successfully!</p> : null}
                 </form>
             </div>
         </div>
