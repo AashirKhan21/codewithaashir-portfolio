@@ -75,7 +75,7 @@ const Contact = () => {
                 <form ref={Refform} onSubmit={sendEmail} className='c-form'>
                     <input style={{backgroundColor: darkMode && "#333", color: darkMode && "white"}} type='text' placeholder='Name' name='user_name'/>
                     <input style={{backgroundColor: darkMode && "#333", color: darkMode && "white"}} type='text' placeholder='Subject' name='user_subject'/>
-                    <input style={{backgroundColor: darkMode && "#333", color: darkMode && "white"}} type='text' placeholder='Email' name='user_email'/>
+                    <input style={{backgroundColor: darkMode && "#333", color: darkMode && "white"}} type='email' placeholder='Email' name='user_email'/>
                     <textarea rows={5} placeholder='Message' name='message'
                          style={{backgroundColor: darkMode && "#333", color: darkMode && "white"}} 
                     />

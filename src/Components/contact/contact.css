@@ -87,3 +87,46 @@ input:focus{
 .c-done{
     color: rgb(23, 216, 23);
 }
+
+@media screen and (max-width: 480px) {
+    .c-wrapper {
+        flex-direction: column;
+        padding: 0px 50px;
+      }
+    
+      .c-title {
+        font-size: 30px;
+      }
+    
+      .c-info-item {
+        margin: 20px 0px;
+        width: 100%;
+      }
+      .c-info-item>a{
+        font-size: 15px;
+    }
+    
+      .c-desc {
+        display: none;
+      }
+    
+      form {
+        margin-top: 0px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+    
+      input {
+        width: 40%;
+        height: 40px;
+        margin: 10px;
+        margin-left: 0;
+      }
+      input[type="email"] {
+        width: 90%;
+      }
+      button {
+        margin-top: 10px;
+        width: 95%;
+      }
+}
