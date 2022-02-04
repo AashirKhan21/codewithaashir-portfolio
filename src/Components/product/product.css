@@ -28,6 +28,13 @@
     transform: scale(1.1);
 }
 
+@media screen and (max-width: 786px) {
+    .p {
+      width: 45%;
+      height: 24vh;
+    }
+  }
+
 @media screen and (max-width: 480px) {
     .p {
       width: 100%;

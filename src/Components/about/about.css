@@ -64,6 +64,46 @@
     margin-bottom: 10px;
 }
 
+@media screen and (max-width: 786px) {
+    .a{
+        flex-direction: column;
+        text-align: center;
+        margin-top: 15rem;
+        padding: 10px;
+        text-align: justify;
+      }
+  
+      .a-left {
+        width: 100%;
+      }
+  
+      .a-card {
+        width: 80%;
+        height: 35vh;
+      }
+  
+      .a-card.bg {
+        display: none;
+      }
+      .a-award{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .a-award-title{
+          font-size: 16px;
+          color: #bdc0c4;
+          text-align: center;
+      }
+      .a-award-text{
+          font-size: 14px;
+          text-align: center;
+      }
+      .a-right{
+        padding: 20px;
+      }
+}
+
 @media screen and (max-width: 480px) {
     .a{
         flex-direction: column;
