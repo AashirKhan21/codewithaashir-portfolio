@@ -1,19 +1,21 @@
-import React, { useRef , useState} from 'react';
+import React, { useRef , useState, useContext} from 'react';
 import './contact.css';
 import phone from '../../img/phone.png';
 import email from '../../img/email.png';
 import github from '../../img/github.png';
 import linkedin from '../../img/linkedin.png';
 import emailjs from '@emailjs/browser';
+import { ThemeContext } from '../../Context';
 
 const Contact = () => {
     const Refform = useRef();
     const [done, setDone] = useState(false);
+    const theme = useContext(ThemeContext);
+    const darkMode = theme.state.darkMode;
     const sendEmail = (e) => {
         e.preventDefault();
     
-        emailjs.
-        sendForm(
+        emailjs.sendForm(
             'service_4a6gkcs', 
             'template_knrx7os', 
             Refform.current, 
@@ -71,10 +73,12 @@ const Contact = () => {
                     right opportunity arises.
                 </p>
                 <form ref={Refform} onSubmit={sendEmail} className='c-form'>
-                    <input type='text' placeholder='Name' name='user_name'/>
-                    <input type='text' placeholder='Subject' name='user_subject'/>
-                    <input type='text' placeholder='Email' name='user_email'/>
-                    <textarea rows={5} placeholder='Message' name='message'/>
+                    <input style={{backgroundColor: darkMode && "#333", color: darkMode && "white"}} type='text' placeholder='Name' name='user_name'/>
+                    <input style={{backgroundColor: darkMode && "#333", color: darkMode && "white"}} type='text' placeholder='Subject' name='user_subject'/>
+                    <input style={{backgroundColor: darkMode && "#333", color: darkMode && "white"}} type='text' placeholder='Email' name='user_email'/>
+                    <textarea rows={5} placeholder='Message' name='message'
+                         style={{backgroundColor: darkMode && "#333", color: darkMode && "white"}} 
+                    />
                     <button>Submit</button>
                     {done ? <p className='c-done'>Message sent successfully!</p> : null}
                 </form>

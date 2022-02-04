@@ -25,7 +25,7 @@ const intro = () => {
           height="75"
           viewBox="0 0 75 75"
           fill="none"
-          stroke="black"
+          stroke="#217ac4"
           className="i-scroll"
           xmlns="http://www.w3.org/2000/svg"
         >

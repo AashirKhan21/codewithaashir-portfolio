@@ -4,6 +4,7 @@ import Product from '../product/product';
 import { projects } from '../../data';
 
 const productList = () => {
+  
   return (
     <div className='pl'>
         <div className='pl-texts'>
