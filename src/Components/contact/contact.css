@@ -137,15 +137,18 @@ input:focus{
       }
     
       .c-title {
-        font-size: 30px;
+        font-size: 22px;
       }
-    
+      .c-icon{
+          width: 32px;
+          height: 32px;
+      }
       .c-info-item {
         margin: 20px 0px;
         width: 100%;
       }
       .c-info-item>a{
-        font-size: 15px;
+        font-size: 13px;
     }
     
       .c-desc {
@@ -153,7 +156,7 @@ input:focus{
       }
     
       form {
-        margin-top: 0px;
+        margin-top: -10px;
         display: flex;
         flex-wrap: wrap;
       }
@@ -165,10 +168,14 @@ input:focus{
         margin-left: 0;
       }
       input[type="email"] {
-        width: 90%;
+        width: 100%;
+      }
+      textarea{
+          width: 100%;
+          height: 65px;
       }
       button {
         margin-top: 10px;
-        width: 95%;
+        width: 100%;
       }
 }
